@@ -10,6 +10,8 @@
 
   //Declare special characters
 
+  let specialChar = []
+
 // Prompt user for password, 
 function generatePassword() {
 
