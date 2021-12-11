@@ -1,4 +1,4 @@
-# Password Generator Starter Code
+# Password Generator Challenge
 
 ## Purpose
 Challenge project designed to test my ability to create functional javascript and enhance website HTML/CSS functionality with Javascript. 
