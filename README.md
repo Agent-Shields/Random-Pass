@@ -9,7 +9,7 @@ Challenge project designed to test my ability to create functional javascript an
 *Javascript
 
 ## Website
-https://agent-shields.github.io/
+https://agent-shields.github.io/Random-Pass/
 
 ## Screenshot
 These images outline what you should see when you open the website link above after you've cloned this repo: 
