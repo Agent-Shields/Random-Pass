@@ -16,17 +16,6 @@
 
   let numericChars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
-  //logic to determine which character type to use 
-  function pickCharType (){
-    var ranVal = math.random();
-    console.log(ranVal);
-    // if (ranVal <= 0.25){//assign lowercase
-    // } else if (ranVal > 0.25 || ranVal < 0.5)  {//assign uppercase
-    // }
-    // else if (ranVal >= 0.5 || ranVal <0.75) {//assign numeric}
-    // }else (ranVal >= 0.75) {//assign SpecialChar}
-    // }
-  }
 // Prompt user for password
 
 function generatePassword() {
@@ -75,6 +64,10 @@ function generatePassword() {
     
         //get desired password character Types 
         
+        //instantiate password character type empty array
+
+        var pwCharType = [];
+
         //Ask user if want lowercase characters
         var pwCharTypeLower = window.confirm('Do you want your password to include lower case characters?');
 
@@ -82,9 +75,10 @@ function generatePassword() {
 
         if (pwCharTypeLower) {
           window.alert('Your password will contain lower case characters');
+          pwCharType.push(lowerCaseChar);
         } else {
           window.alert('Your password will not contain lower case characters');
-        }
+        } 
 
          //Ask user if want uppercase characters
          var pwCharTypeUpper = window.confirm('Do you want your password to include upper case characters?');
@@ -93,6 +87,7 @@ function generatePassword() {
 
          if (pwCharTypeUpper) {
            window.alert('Your password will contain upper case characters');
+           pwCharType.push(upperCaseChar);
          } else {
            window.alert('Your password will not contain upper case characters');
          }
@@ -104,6 +99,7 @@ function generatePassword() {
 
         if (pwCharTypeNumeric) {
           window.alert('Your password will contain numbers');
+          pwCharType.push(numericChars);
         } else {
           window.alert('Your password will not contain numbers');
         }
@@ -115,15 +111,31 @@ function generatePassword() {
 
         if (pwCharTypeSpecial) {
           window.alert('Your password will contain special characters');
+          pwCharType.push(specialChars);
         } else {
           window.alert('Your password will not contain special characters');
         }
+
+        console.log(pwCharType)
 
         //Verify at least one criteria was selected
         if (!pwCharTypeSpecial && !pwCharTypeLower && !pwCharTypeNumeric && !pwCharTypeUpper) {
           window.alert('You need to select at least one password criteria!');
           return pwCriteria();
         }
+
+        //logic to determine which character type to use 
+        // function pickCharType () {
+        //   var ranVal = math.random();
+        //   return (ranVal);
+        //    if (ranVal <= 0.25){//assign lowercase
+        //    } else if (ranVal > 0.25 || ranVal < 0.5)  {//assign uppercase
+        //    }
+        //    else if (ranVal >= 0.5 || ranVal <0.75) {//assign numeric}
+        //   }else (ranVal >= 0.75) {//assign SpecialChar}
+        //   }
+        // }
+
       }
 
     pwCriteria();
