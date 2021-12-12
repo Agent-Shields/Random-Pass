@@ -16,6 +16,17 @@
 
   let numericChars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
+  //logic to determine which character type to use 
+  function pickCharType (){
+    var ranVal = math.random();
+    console.log(ranVal);
+    // if (ranVal <= 0.25){//assign lowercase
+    // } else if (ranVal > 0.25 || ranVal < 0.5)  {//assign uppercase
+    // }
+    // else if (ranVal >= 0.5 || ranVal <0.75) {//assign numeric}
+    // }else (ranVal >= 0.75) {//assign SpecialChar}
+    // }
+  }
 // Prompt user for password
 
 function generatePassword() {
