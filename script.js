@@ -2,19 +2,28 @@
 
   //Declare lower case characters
 
+ 
   let lowerCaseChar = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
+  
+    // alternatively let lowerCaseChar = 'abcdefghijklmnopqrstuvwxyz'
+ 
   //Declare upper case characters
 
   let upperCaseChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
  
+    // alternatively let upperCaseChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
   //Declare special characters
 
   let specialChars = ['@', '%', '+', '/', "'", '!', '#', '$', '^', '?', ':', ',', '(', ')', '{', '}', '[', ']', '~', '-', '_', '.']
  
+    // alternatively let specialChars = "@%+/'!#$^?:,(){}[]~-_."
+
   //Declare numeric characters
 
   let numericChars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+    // alternatively let numericChars = "0123456789"
 
 // Prompt user for password
 
