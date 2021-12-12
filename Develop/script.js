@@ -55,7 +55,7 @@ function generatePassword() {
 
         var pwLengthConfirm = window.confirm('You want your password to be ' + pwLength + ' characters long?');
         if (pwLengthConfirm) {
-          window.alert('Your password will be ' + pwLength + ' characters long')
+          window.alert('Your password will be ' + pwLength + ' characters long');
         }
         else
         {
@@ -70,9 +70,9 @@ function generatePassword() {
         //Verify user wants lowercase characters 
 
         if (pwCharTypeLower) {
-          window.alert('Your password will contain lower case characters')
+          window.alert('Your password will contain lower case characters');
         } else {
-          window.alert('Your password will not contain lower case characters')
+          window.alert('Your password will not contain lower case characters');
         }
 
          //Ask user if want uppercase characters
@@ -81,9 +81,9 @@ function generatePassword() {
          //Verify user wants uppercase characters 
 
          if (pwCharTypeUpper) {
-           window.alert('Your password will contain upper case characters')
+           window.alert('Your password will contain upper case characters');
          } else {
-           window.alert('Your password will not contain upper case characters')
+           window.alert('Your password will not contain upper case characters');
          }
 
           //Ask user if want numeric characters
@@ -92,9 +92,9 @@ function generatePassword() {
         //Verify user wants numeric characters 
 
         if (pwCharTypeNumeric) {
-          window.alert('Your password will contain numbers')
+          window.alert('Your password will contain numbers');
         } else {
-          window.alert('Your password will not contain numbers')
+          window.alert('Your password will not contain numbers');
         }
 
         //Ask user if want special characters
@@ -103,9 +103,15 @@ function generatePassword() {
         //Verify user wants special characters 
 
         if (pwCharTypeSpecial) {
-          window.alert('Your password will contain special characters')
+          window.alert('Your password will contain special characters');
         } else {
-          window.alert('Your password will not contain special characters')
+          window.alert('Your password will not contain special characters');
+        }
+
+        //Verify at least one criteria was selected
+        if (!pwCharTypeSpecial && !pwCharTypeLower && !pwCharTypeNumeric && !pwCharTypeUpper) {
+          window.alert('You need to select at least one password criteria!');
+          return pwCriteria();
         }
       }
 
