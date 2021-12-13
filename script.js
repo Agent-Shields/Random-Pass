@@ -2,31 +2,42 @@
 
   //Declare lower case characters
 
-  // let lowerCaseChar = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+  // var lowerCaseChar = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+ 
+  //declare random lower case char from array
   
     let lowerCaseChar = 'abcdefghijklmnopqrstuvwxyz'
- 
+
+     var pickedLowChar = lowerCaseChar[Math.floor(Math.random()*lowerCaseChar.length)]
+  
   //Declare upper case characters
 
-  // let upperCaseChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
- 
+  // var upperCaseChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+
     let upperCaseChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+      var pickedUpChar = upperCaseChar[Math.floor(Math.random()*upperCaseChar.length)]
 
   //Declare special characters
 
-  // let specialChars = ['@', '%', '+', '/', "'", '!', '#', '$', '^', '?', ':', ',', '(', ')', '{', '}', '[', ']', '~', '-', '_', '.']
- 
+  // var specialChars = ['@', '%', '+', '/', "'", '!', '#', '$', '^', '?', ':', ',', '(', ')', '{', '}', '[', ']', '~', '-', '_', '.']
+
+
     let specialChars = "@%+/'!#$^?:,(){}[]~-_."
+
+      var pickedSpecChar = specialChars[Math.floor(Math.random()*specialChars.length)]
 
   //Declare numeric characters
 
-  // let numericChars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+  // var numericChars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
     let numericChars = "0123456789"
 
-  // //test random number
-  //   var test = Math.random();
-  //   console.log(test);
+      var pickedNumVal = numericChars[Math.floor(Math.random()*numericChars.length)];
+
+        // console.log(PickedNumVal);
+
+
 
 // Prompt user for password
 
@@ -39,7 +50,7 @@ function generatePassword() {
         //get desired password Length
 
       var pwLength = window.prompt('Please enter your desired password length, must be between 8 and 180 characters');
-        console.log(pwLength);
+        // console.log(pwLength);
 
         //check validity of user input
 
@@ -51,7 +62,7 @@ function generatePassword() {
         //convert string input value to integer for pass/fail
 
         pwLength = parseInt(pwLength);
-        console.log(pwLength);
+        // console.log(pwLength);
 
         if (!pwLength) {
           window.alert("you must enter a numeric value!");
@@ -87,7 +98,7 @@ function generatePassword() {
 
         if (pwCharTypeLower) {
           window.alert('Your password will contain lower case characters');
-          pwCharType.push(lowerCaseChar);
+          pwCharType = pwCharType += lowerCaseChar;
         } else {
           window.alert('Your password will not contain lower case characters');
         } 
@@ -99,7 +110,7 @@ function generatePassword() {
 
          if (pwCharTypeUpper) {
            window.alert('Your password will contain upper case characters');
-           pwCharType.push(upperCaseChar);
+            pwCharType = pwCharType += upperCaseChar;
          } else {
            window.alert('Your password will not contain upper case characters');
          }
@@ -111,7 +122,7 @@ function generatePassword() {
 
         if (pwCharTypeNumeric) {
           window.alert('Your password will contain numbers');
-          pwCharType.push(numericChars);
+           pwCharType = pwCharType += numericChars;
         } else {
           window.alert('Your password will not contain numbers');
         }
@@ -123,7 +134,7 @@ function generatePassword() {
 
         if (pwCharTypeSpecial) {
           window.alert('Your password will contain special characters');
-          pwCharType.push(specialChars);
+           pwCharType = pwCharType += specialChars;
         } else {
           window.alert('Your password will not contain special characters');
         }
@@ -135,24 +146,27 @@ function generatePassword() {
           window.alert('You need to select at least one password criteria!');
           return pwCriteria();
         }
-        
-        console.log(pwCharType);
+        desiredPwChars = Array.from(pwCharType);
+        console.log(desiredPwChars);
 
         // for loop to assign random type from selected character types
-        for (var i = 0; i < pwLength; i++ ) {
+        // for (var i = 0; i < pwLength; i++ ) {
 
-          var ranVal = Math.random();
-          console.log(ranVal);
+          // var ranVal = Math.random();
+          // console.log(ranVal);
 
-          if (ranVal <= 0.25) { console.log("Less than .25")
-          }
-          else if (ranVal > 0.25 && ranVal < 0.5) { console.log (" between .25 and .49 ")
-          }
-          else if (ranVal >= 0.5 && ranVal < 0.75) {console.log("between .5 and .75")
-          }
-          else if (ranVal >= 0.75) {console.log("above 0.75")}
+          // if (ranTypeVal <= 0.25) {
+          // }
+          // else if (ranTypeVal > 0.25 && ranVal < 0.5) {
+          // }
+          // else if (ranTypeVal >= 0.5 && ranVal < 0.75) {
+          // }
+          // else if (ranTypeVal >= 0.75) {}
          
-      }
+
+          //test if can return a single array value from pwCharType
+          // console.log(pwCharType);
+      // }
     
     }
 
