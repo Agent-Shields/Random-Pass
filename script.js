@@ -173,8 +173,7 @@ function generatePassword() {
 
        window.alert("Your password is " + generatedPW)
       
-       console.log(generatedPW);
-
+      //  console.log(generatedPW);
     }
 
     pwCriteria();
