@@ -12,7 +12,7 @@ Challenge project designed to test my ability to create functional javascript an
 https://agent-shields.github.io/Random-Pass/
 
 ## Screenshot
-These images outline what you should see when you open the website link above after you've cloned this repo: 
+This image is what I saw after entering that I wanted a 15 character password with lower case, upper case, numeric and special characters: 
 ![image](RandomPassProof.jpg)
 
 
