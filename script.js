@@ -8,7 +8,7 @@
   
     let lowerCaseChar = 'abcdefghijklmnopqrstuvwxyz';
 
-     var pickedLowChar = lowerCaseChar[Math.floor(Math.random()*lowerCaseChar.length)];
+    //  var pickedLowChar = lowerCaseChar[Math.floor(Math.random()*lowerCaseChar.length)];
   
   //Declare upper case characters
 
@@ -16,7 +16,7 @@
 
     let upperCaseChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-      var pickedUpChar = upperCaseChar[Math.floor(Math.random()*upperCaseChar.length)];
+      // var pickedUpChar = upperCaseChar[Math.floor(Math.random()*upperCaseChar.length)];
 
   //Declare special characters
 
@@ -25,7 +25,7 @@
 
     let specialChars = "@%+/'!#$^?:,(){}[]~-_.";
 
-      var pickedSpecChar = specialChars[Math.floor(Math.random()*specialChars.length)];
+      // var pickedSpecChar = specialChars[Math.floor(Math.random()*specialChars.length)];
 
   //Declare numeric characters
 
@@ -33,7 +33,7 @@
 
     let numericChars = "0123456789";
 
-      var pickedNumVal = numericChars[Math.floor(Math.random()*numericChars.length)];
+      // var pickedNumVal = numericChars[Math.floor(Math.random()*numericChars.length)];
 
         // console.log(PickedNumVal);
 
@@ -139,35 +139,42 @@ function generatePassword() {
           window.alert('Your password will not contain special characters');
         }
 
-        
-
         //Verify at least one criteria was selected
         if (!pwCharTypeSpecial && !pwCharTypeLower && !pwCharTypeNumeric && !pwCharTypeUpper) {
           window.alert('You need to select at least one password criteria!');
           return pwCriteria();
         }
+
+        //Convert CharType string to array
+
         desiredPwChars = Array.from(pwCharType);
-        console.log(desiredPwChars);
 
-        // for loop to assign random type from selected character types
-        // for (var i = 0; i < pwLength; i++ ) {
+        // console.log(desiredPwChars);
 
-          // var ranVal = Math.random();
-          // console.log(ranVal);
+        // instantiate empty pw string to be added to in for loop afterwards
 
-          // if (ranTypeVal <= 0.25) {
-          // }
-          // else if (ranTypeVal > 0.25 && ranVal < 0.5) {
-          // }
-          // else if (ranTypeVal >= 0.5 && ranVal < 0.75) {
-          // }
-          // else if (ranTypeVal >= 0.75) {}
-         
+        let generatedPW = "";
 
-          //test if can return a single array value from pwCharType
-          // console.log(pwCharType);
-      // }
-    
+        // for loop to assign random characters from selected character types
+        for (var i = 0; i < pwLength; i++ ) {
+
+          // calculate a random character from user selected criteria
+
+          var pickedRanChar = desiredPwChars[Math.floor(Math.random()*desiredPwChars.length)];
+
+          // concantenate single characters into new generated password
+
+          generatedPW = generatedPW += pickedRanChar;
+
+       }
+      
+
+      // Return the new password on webpage
+
+       window.alert("Your password is " + generatedPW)
+      
+       console.log(generatedPW);
+
     }
 
     pwCriteria();
