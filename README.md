@@ -13,8 +13,8 @@ https://agent-shields.github.io/Random-Pass/
 
 ## Screenshot
 These images outline what you should see when you open the website link above after you've cloned this repo: 
-<!-- ![image](assets/images/Horiseon-webpage-upper-half.PNG)
-![image](assets/images/Horiseon-webpage-lower-half.PNG) -->
+![image](RandomPassProof.jpg)
+
 
 ## Contribution
 Made with ❤️ by Johnathan Shields 
